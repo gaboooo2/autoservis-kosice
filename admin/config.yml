@@ -1,1 +1,16 @@
+backend:
+  name: git-gateway
+  branch: main
 
+media_folder: "images/galeria"
+public_folder: "/images/galeria"
+
+collections:
+  - name: "galeria"
+    label: "Galéria"
+    folder: "images/galeria"
+    create: true
+    fields:
+      - { label: "Názov fotky", name: "title", widget: "string" }
+      - { label: "Fotka", name: "image", widget: "image" }
+      - { label: "Popis", name: "description", widget: "string", required: false }
